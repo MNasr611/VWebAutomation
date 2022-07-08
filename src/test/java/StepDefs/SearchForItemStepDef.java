@@ -10,7 +10,6 @@ public class SearchForItemStepDef {
     SearchForItem searchForItem = new SearchForItem();
 
 
-
     @Given("Open Google and perform a search for {string}.")
     public void openGoogleAndPerformASearchFor(String searchItem) {
         searchForItem.Searching(searchItem);

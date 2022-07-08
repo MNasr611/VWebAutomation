@@ -5,7 +5,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static helpers.PropertiesLoader.readPropertyFile;
-import static java.lang.System.getProperty;
 
 public class Config {
     private static String url;

@@ -1,4 +1,5 @@
 package core;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -9,14 +10,10 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.PageFactory;
 
 
-import java.net.MalformedURLException;
-
-
 public class Hooks {
-    private  static WebDriver driver;
+    private static WebDriver driver;
     private final Config config = new Config();
     private DriverFactory factory = new DriverFactory();
-
 
 
     public static WebDriver getDriver() {
@@ -37,7 +34,7 @@ public class Hooks {
     }
 
     @Before(order = 1)
-    public void beforeAll(Scenario scenario){
+    public void beforeAll(Scenario scenario) {
         if (!scenario.getId().contains(" ")) {
             if (driver == null) {
                 setDriver(factory.createDriver());
@@ -49,7 +46,6 @@ public class Hooks {
     }
 
 
-
     @After
     public void afterAll(Scenario scenario) {
         try {
@@ -57,7 +53,7 @@ public class Hooks {
         } catch (Exception e) {
             System.out.println("Failed to take screenshot");
         }
-//        driver.quit();
+        driver.quit();
     }
 
 }

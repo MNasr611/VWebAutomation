@@ -13,8 +13,5 @@ public class Home extends Hooks {
             @FindBy(how = How.XPATH, using = "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")
     })
     public static WebElement searchBar;
-    @FindAll({
-            @FindBy(how = How.XPATH, using = "//span[@dir='ltr']")
-    })
-    public static WebElement href;
+
 }
