@@ -19,6 +19,6 @@ public class WebUtils {
 
     public static void scrollElementIntoView(WebDriver driver, final WebElement webElement) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", webElement);
-        implicitWait(driver, 50);
+        implicitWait(driver, 5);
     }
 }
