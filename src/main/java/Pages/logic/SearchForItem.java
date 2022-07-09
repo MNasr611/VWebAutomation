@@ -33,9 +33,6 @@ public class SearchForItem extends Home {
 
     public void confirmTitleIsDisplayedInAdLinks() {
         for (int i = 0; i < webElements.size(); i++) {
-            String text = webElements.get(i).getText();
-            System.out.println("text");
-
             try {
                 scrollElementIntoView(driver, webElements.get(i));
                 Assert.assertTrue(webElements.get(i).isDisplayed());
